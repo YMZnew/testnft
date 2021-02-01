@@ -52,6 +52,7 @@ function isMobile () {
     );
   
     var root = new THREE.Object3D();
+    root.matrixAutoUpdate = false
     scene.add(root);
           
           
