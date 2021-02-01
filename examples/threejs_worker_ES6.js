@@ -49,7 +49,7 @@ function isMobile () {
   
     var root = new THREE.Object3D();
     scene.add(root);
-  var url = '/Data/models/Duck/glTF/Duck.glb'
+  var url = '/Data/Duck.glb'
   var x = 40
   var y = 80
   var z = 80
