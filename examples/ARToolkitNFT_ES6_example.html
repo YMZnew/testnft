@@ -55,11 +55,11 @@
   */
   var statsMain = new Stats();
   statsMain.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
-  document.getElementById( 'stats1' ).appendChild( statsMain.dom );
+ // document.getElementById( 'stats1' ).appendChild( statsMain.dom );
 
   var statsWorker = new Stats();
   statsWorker.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
-  document.getElementById( 'stats2' ).appendChild( statsWorker.dom );
+ // document.getElementById( 'stats2' ).appendChild( statsWorker.dom );
 
   window.addEventListener('load', () => {
     console.log('init ARToolkitNFT...');
