@@ -168,7 +168,7 @@ function isMobile () {
               // removing loader page if present
               var loader = document.getElementById('loading');
               if (loader) {
-                loader.querySelector('.loading-text').innerText = 'Start the tracking!';
+                loader.querySelector('.loading-text').innerText = 'loaded';
                 setTimeout(function(){
                   loader.parentElement.removeChild(loader);
                 }, 2000);
