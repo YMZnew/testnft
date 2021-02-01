@@ -74,7 +74,7 @@ function isMobile () {
         model.position.y = y
         model.position.z = z
           
-   root.matrixAutoUpdate = false;
+   //root.matrixAutoUpdate = false;
         root.add(model)
       })
     
