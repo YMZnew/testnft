@@ -43,6 +43,7 @@
   <script src="../dist/ARToolkitNFT.js"></script>
   <script src="js/third_party/three.js/stats.min.js"></script>
   <script src="js/third_party/three.js/three.min.js"></script>
+  <script type="module" src="js/third_party/three.js/GLTFLoader.js"></script>
   <script src="index.js"></script>
   <script src="threejs_worker_ES6.js"></script>
 
@@ -81,7 +82,7 @@
   })
   .then(_ => {
 
-    start('../examples/DataNFT/pinball', video, video.videoWidth, video.videoHeight, function() { statsMain.update() }, function() { statsWorker.update() })
+    start('../examples/DataNFT/chamran', video, video.videoWidth, video.videoHeight, function() { statsMain.update() }, function() { statsWorker.update() })
 
     });
   })
