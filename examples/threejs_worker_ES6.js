@@ -1,4 +1,5 @@
 
+var model ;
 
 function isMobile () {
     return /Android|mobile|iPad|iPhone/i.test(navigator.userAgent);
@@ -49,37 +50,40 @@ function isMobile () {
   
     var root = new THREE.Object3D();
     scene.add(root);
-//   var url = '/Data/Duck.glb'
-//   var x = 40
-//   var y = 80
-//   var z = 80
-//   var scale = 80
+          
+          
+  var url = './Data/Duck.glb'
+  var x = 40
+  var y = 80
+  var z = 80
+  var scale = 80
   
-//   let model ;
+//    let model ;
         
-//         /* Load Model */
-//       const threeGLTFLoader = new THREE.GLTFLoader()
+        /* Load Model */
+      const threeGLTFLoader = new THREE.GLTFLoader()
   
-//       threeGLTFLoader.load(url, gltf => {
-//         model = gltf.scene
-//         model.scale.set(scale, scale, scale)
-//         model.rotation.x = Math.PI / 2
-//         model.position.x = x
-//         model.position.y = y
-//         model.position.z = z
-  
-//         root.add(model)
-//       })
+      threeGLTFLoader.load(url, gltf => {
+        model = gltf.scene
+        model.scale.set(scale, scale, scale)
+        model.rotation.x = Math.PI / 2
+        model.position.x = x
+        model.position.y = y
+        model.position.z = z
+          
+   root.matrixAutoUpdate = false;
+        root.add(model)
+      })
     
     
-    sphere.material.flatShading;
-    sphere.position.z = 0;
-    sphere.position.x = 100;
-    sphere.position.y = 100;
-    sphere.scale.set(200, 200, 200);
+//     sphere.material.flatShading;
+//     sphere.position.z = 0;
+//     sphere.position.x = 100;
+//     sphere.position.y = 100;
+//     sphere.scale.set(200, 200, 200);
   
-    root.matrixAutoUpdate = false;
-    root.add(sphere);
+   
+//     root.add(sphere);
   
     var load = function () {
       vw = input_width;
