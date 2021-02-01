@@ -3,6 +3,7 @@ let targetCanvas;
 
 async function initCamera() {
     
+	var aspect = 200/280;
   const constraints = {
     audio: false,
 video: {
