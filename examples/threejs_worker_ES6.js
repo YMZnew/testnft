@@ -47,7 +47,7 @@ function start(markerUrl, video, input_width, input_height, render_update, track
 
   var root = new THREE.Object3D();
   scene.add(root);
-var url = './Data/models/Duck/glTF/Duck.glb'
+var url = '/Data/models/Duck/glTF/Duck.glb'
 var x = 40
 var y = 80
 var z = 80
