@@ -210,9 +210,12 @@ function isMobile () {
       requestAnimationFrame(tick);
     };
   
+      try{
     load();
     tick();
     process();
-  
+      }catch(e){
+       alert("YMZ YMA : "  +e); 
+      }
   }
   
