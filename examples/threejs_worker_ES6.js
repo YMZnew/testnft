@@ -49,27 +49,27 @@ function isMobile () {
   
     var root = new THREE.Object3D();
     scene.add(root);
-  var url = '/Data/Duck.glb'
-  var x = 40
-  var y = 80
-  var z = 80
-  var scale = 80
+//   var url = '/Data/Duck.glb'
+//   var x = 40
+//   var y = 80
+//   var z = 80
+//   var scale = 80
   
-  let model ;
+//   let model ;
         
-        /* Load Model */
-      const threeGLTFLoader = new THREE.GLTFLoader()
+//         /* Load Model */
+//       const threeGLTFLoader = new THREE.GLTFLoader()
   
-      threeGLTFLoader.load(url, gltf => {
-        model = gltf.scene
-        model.scale.set(scale, scale, scale)
-        model.rotation.x = Math.PI / 2
-        model.position.x = x
-        model.position.y = y
-        model.position.z = z
+//       threeGLTFLoader.load(url, gltf => {
+//         model = gltf.scene
+//         model.scale.set(scale, scale, scale)
+//         model.rotation.x = Math.PI / 2
+//         model.position.x = x
+//         model.position.y = y
+//         model.position.z = z
   
-        root.add(model)
-      })
+//         root.add(model)
+//       })
     
     
   //   sphere.material.flatShading;
@@ -177,19 +177,11 @@ function isMobile () {
       lasttime = now;
   
       if (!world) {
-          try{
-        model.visible = false;
-          }catch(e){
-            
-          }
+        root.visible = false;
   //       sphere.visible = false;
       } else {
   //       sphere.visible = true;
-  try{
-    model.visible = true;
-      }catch(e){
-          alert("YMZ : "+e)
-      }
+    root.visible = true;
         // model.visible = true;
         // set matrix of 'root' by detected 'world' matrix
         setMatrix(root.matrix, world);
