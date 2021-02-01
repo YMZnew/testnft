@@ -88,15 +88,15 @@ var mesh = null;
   var scale = 80
 
 var mtlLoader = new THREE.MTLLoader();
-mtlLoader.setPath( "./Data/" );
-mtlLoader.load( 'sample.mtl', function( materials ) {
+//mtlLoader.setPath( "./Data/" );
+mtlLoader.load( './Data/sample.mtl', function( materials ) {
 
   materials.preload();
 
   var objLoader = new THREE.OBJLoader();
   objLoader.setMaterials( materials );
-  objLoader.setPath( "./Data/" );
-  objLoader.load( 'sample.obj', function ( object ) {
+  //objLoader.setPath( "./Data/" );
+  objLoader.load( './Data/sample.obj', function ( object ) {
 
     mesh = object;
     mesh.position.x = x;
