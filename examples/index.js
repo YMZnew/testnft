@@ -3,18 +3,18 @@ let targetCanvas;
 
 async function initCamera() {
     
-	var aspect = 640/480;
+	var aspect = 200/280;
   const constraints = {
     audio: false,
 video: {
 			
 				width: {
-					ideal: 640,
+					ideal: 200,
 					// min: 1024,
 					// max: 1920
 				},
 				height: {
-					ideal: 480,
+					ideal: 280,
 					// min: 776,
 					// max: 1080
 				},
