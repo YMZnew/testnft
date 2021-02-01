@@ -42,10 +42,10 @@ function isMobile () {
   
     scene.add(camera);
   
-  //   var sphere = new THREE.Mesh(
-  //     new THREE.SphereGeometry(0.5,8, 8),
-  //     new THREE.MeshBasicMaterial( {color: 0xffff00} )
-  //   );
+    var sphere = new THREE.Mesh(
+      new THREE.SphereGeometry(0.5,8, 8),
+      new THREE.MeshBasicMaterial( {color: 0xffff00} )
+    );
   
     var root = new THREE.Object3D();
     scene.add(root);
@@ -72,14 +72,14 @@ function isMobile () {
 //       })
     
     
-  //   sphere.material.flatShading;
-  //   sphere.position.z = 0;
-  //   sphere.position.x = 100;
-  //   sphere.position.y = 100;
-  //   sphere.scale.set(200, 200, 200);
+    sphere.material.flatShading;
+    sphere.position.z = 0;
+    sphere.position.x = 100;
+    sphere.position.y = 100;
+    sphere.scale.set(200, 200, 200);
   
     root.matrixAutoUpdate = false;
-  //   root.add(sphere);
+    root.add(sphere);
   
     var load = function () {
       vw = input_width;
