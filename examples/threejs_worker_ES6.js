@@ -1,3 +1,5 @@
+var model ;
+
 function isMobile () {
   return /Android|mobile|iPad|iPhone/i.test(navigator.userAgent);
 }
@@ -38,22 +40,42 @@ function start(markerUrl, video, input_width, input_height, render_update, track
 
   scene.add(camera);
 
-  var sphere = new THREE.Mesh(
-    new THREE.SphereGeometry(0.5,8, 8),
-    new THREE.MeshBasicMaterial( {color: 0xffff00} )
-  );
+//   var sphere = new THREE.Mesh(
+//     new THREE.SphereGeometry(0.5,8, 8),
+//     new THREE.MeshBasicMaterial( {color: 0xffff00} )
+//   );
 
   var root = new THREE.Object3D();
   scene.add(root);
+var url = './Data/models/Duck/glTF/Duck.glb'
+var x = 40
+var y = 80
+var z = 80
+var scale = 80
 
-  sphere.material.flatShading;
-  sphere.position.z = 0;
-  sphere.position.x = 100;
-  sphere.position.y = 100;
-  sphere.scale.set(200, 200, 200);
+      /* Load Model */
+    const threeGLTFLoader = new GLTFLoader()
+
+    threeGLTFLoader.load(url, gltf => {
+      model = gltf.scene
+      model.scale.set(scale, scale, scale)
+      model.rotation.x = Math.PI / 2
+      model.position.x = x
+      model.position.y = y
+      model.position.z = z
+
+      root.add(model)
+    })
+  
+  
+//   sphere.material.flatShading;
+//   sphere.position.z = 0;
+//   sphere.position.x = 100;
+//   sphere.position.y = 100;
+//   sphere.scale.set(200, 200, 200);
 
   root.matrixAutoUpdate = false;
-  root.add(sphere);
+//   root.add(sphere);
 
   var load = function () {
     vw = input_width;
@@ -148,9 +170,11 @@ function start(markerUrl, video, input_width, input_height, render_update, track
     lasttime = now;
 
     if (!world) {
-      sphere.visible = false;
+      model.visible = false;
+//       sphere.visible = false;
     } else {
-      sphere.visible = true;
+//       sphere.visible = true;
+      model.visible = true;
       // set matrix of 'root' by detected 'world' matrix
       setMatrix(root.matrix, world);
     }
