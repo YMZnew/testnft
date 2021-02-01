@@ -55,58 +55,58 @@ function isMobile () {
     scene.add(root);
           
           
- // var url = './Data/Duck.glb'
+ var url = './Data/gun.glb'
 //    var url = './Data/brave_robot.glb'
-//   var x = 40
-//   var y = 80
-//   var z = 80
-//   var scale = 80
-  
-// //    let model ;
-        
-//         /* Load Model */
-//       const threeGLTFLoader = new THREE.GLTFLoader()
-  
-//       threeGLTFLoader.load(url, gltf => {
-//         model = gltf.scene
-//         model.scale.set(scale, scale, scale)
-//         model.rotation.x = Math.PI / 2
-//         model.position.x = x
-//         model.position.y = y
-//         model.position.z = z
-          
-//    //root.matrixAutoUpdate = false;
-//         root.add(model)
-//       })
-    
-    
-// model
-var mesh = null;
   var x = 40
   var y = 80
   var z = 80
   var scale = 80
+  
+//    let model ;
+        
+        /* Load Model */
+      const threeGLTFLoader = new THREE.GLTFLoader()
+  
+      threeGLTFLoader.load(url, gltf => {
+        model = gltf.scene
+        model.scale.set(scale, scale, scale)
+        model.rotation.x = Math.PI / 2
+        model.position.x = x
+        model.position.y = y
+        model.position.z = z
+          
+   //root.matrixAutoUpdate = false;
+        root.add(model)
+      })
+    
+    
+// model
+// var mesh = null;
+//   var x = 40
+//   var y = 80
+//   var z = 80
+//   var scale = 80
 
-var mtlLoader = new THREE.MTLLoader();
-//mtlLoader.setPath( "./Data/" );
-mtlLoader.load( './Data/sample.mtl', function( materials ) {
+// var mtlLoader = new THREE.MTLLoader();
+// //mtlLoader.setPath( "./Data/" );
+// mtlLoader.load( './Data/sample.mtl', function( materials ) {
 
-  materials.preload();
+//   materials.preload();
 
-  var objLoader = new THREE.OBJLoader();
-  objLoader.setMaterials( materials );
-  //objLoader.setPath( "./Data/" );
-  objLoader.load( './Data/sample.obj', function ( object ) {
+//   var objLoader = new THREE.OBJLoader();
+//   objLoader.setMaterials( materials );
+//   //objLoader.setPath( "./Data/" );
+//   objLoader.load( './Data/sample.obj', function ( object ) {
 
-    mesh = object;
-    mesh.position.x = x;
-    mesh.position.y = y;
-    mesh.position.z = z;
-    root.add( mesh );
+//     mesh = object;
+//     mesh.position.x = x;
+//     mesh.position.y = y;
+//     mesh.position.z = z;
+//     root.add( mesh );
 
-  } );
+//   } );
 
-} );
+// } );
       
           
 //     sphere.material.flatShading;
