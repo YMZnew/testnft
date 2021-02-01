@@ -180,7 +180,7 @@ function isMobile () {
           try{
         model.visible = false;
           }catch(e){
-              alert("YMA : "+e)
+            
           }
   //       sphere.visible = false;
       } else {
