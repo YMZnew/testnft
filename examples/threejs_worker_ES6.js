@@ -56,7 +56,7 @@ var z = 80
 var scale = 80
 
       /* Load Model */
-    const threeGLTFLoader = new GLTFLoader()
+    const threeGLTFLoader = new THREE.GLTFLoader()
 
     threeGLTFLoader.load(url, gltf => {
       model = gltf.scene
