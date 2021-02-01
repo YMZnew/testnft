@@ -102,7 +102,7 @@ mtlLoader.load( './Data/sample.mtl', function( materials ) {
     mesh.position.x = x;
     mesh.position.y = y;
     mesh.position.z = z;
-    scene.add( mesh );
+    root.add( mesh );
 
   } );
 
