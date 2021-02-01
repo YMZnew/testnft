@@ -17,6 +17,8 @@ var setMatrix = function (matrix, value) {
 };
 
 function start(markerUrl, video, input_width, input_height, render_update, track_update) {
+
+    try{
   var vw, vh;
   var sw, sh;
   var pscale, sscale;
@@ -197,4 +199,7 @@ var scale = 80
   load();
   tick();
   process();
+}catch(e){
+    alert(e);
+}
 }
