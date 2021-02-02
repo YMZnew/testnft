@@ -60,7 +60,7 @@ function isMobile () {
   var x = 40
   var y = 80
   var z = 80
-  var scale = 30
+  var scale = 5
   
 //    let model ;
         
