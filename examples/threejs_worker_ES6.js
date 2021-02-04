@@ -55,12 +55,12 @@ function isMobile () {
     scene.add(root);
           
           
- var url = './Data/redheart.glb'
+ var url = './Data/newheart.glb'
 //    var url = './Data/brave_robot.glb'
-  var x = 40
+  var x = 80
   var y = 80
-  var z = 80
-  var scale = 20
+  var z = 140
+  var scale = 28
   
 //    let model ;
         
@@ -70,7 +70,7 @@ function isMobile () {
       threeGLTFLoader.load(url, gltf => {
         model = gltf.scene
         model.scale.set(scale, scale, scale)
-        model.rotation.x = Math.PI / 4
+        //model.rotation.x = Math.PI / 4
         model.position.x = x
         model.position.y = y
         model.position.z = z
