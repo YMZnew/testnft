@@ -60,7 +60,7 @@ function isMobile () {
   var x = 40
   var y = 80
   var z = 80
-  var scale = 40
+  var scale = 10
   
 //    let model ;
         
@@ -70,7 +70,7 @@ function isMobile () {
       threeGLTFLoader.load(url, gltf => {
         model = gltf.scene
         model.scale.set(scale, scale, scale)
-        model.rotation.x = Math.PI / 2
+        model.rotation.x = -1*Math.PI / 2
         model.position.x = x
         model.position.y = y
         model.position.z = z
