@@ -55,7 +55,7 @@ function isMobile () {
     scene.add(root);
           
           
- var url = './Data/scene.glb'
+ var url = './Data/scene.gltf'
 //    var url = './Data/brave_robot.glb'
   var x = 40
   var y = 80
