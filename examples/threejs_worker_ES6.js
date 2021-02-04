@@ -74,27 +74,8 @@ function isMobile () {
         model.position.x = x
         model.position.y = y
         model.position.z = z
-          
 
-var mat001 = new THREE.MeshPhysicalMaterial();
-  mat001.color = new THREE.Color("gold");
-  mat001.reflectivity = 1.0;
-  mat001.roughness = 0.0;
-  mat001.envMapIntensity = 1.0;
-
-  //MODEL from loader
-  var mesh01;
-  threeGLTFLoader.scene.traverse(function (child) {
-    if (child.isMesh) {
-      mesh01 = child;
-      child.material = mat001; // This is
-      scene.add(mesh01);
-      mesh01.scale.set(1, 1, 1);
-    }
-  });
-
-
-   //root.matrixAutoUpdate = false;
+      root.matrixAutoUpdate = false;
         root.add(model)
       })
     
