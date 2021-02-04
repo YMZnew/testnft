@@ -88,7 +88,7 @@ var mat001 = new THREE.MeshPhysicalMaterial();
     if (child.isMesh) {
       mesh01 = child;
       child.material = mat001; // This is
-      root.add(mesh01);
+      scene.add(mesh01);
       mesh01.scale.set(1, 1, 1);
     }
   });
